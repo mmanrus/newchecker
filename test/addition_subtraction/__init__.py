@@ -34,4 +34,4 @@ def checkAgain():
 @check50.check(compiles)
 def checkAgain():
     """Checks if Rejects \"A\""""
-    check50.run("./addition_subtraction").stdin("A").exit(1, help="Input 'A' should cause the program to exit with an error.")
+    check50.run("./addition_subtraction").stdin("A").reject()

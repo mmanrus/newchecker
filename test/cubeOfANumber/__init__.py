@@ -13,7 +13,7 @@ def compiles():
 
 
 @check50.check(compiles)
-def test_0:
+def test_zero:
      """Checks if the program correctly calculates the cube of a number."""
      result = check50.run("./cube.c").stdin("23").stdout()
 
@@ -23,7 +23,7 @@ def test_0:
         raise check50.Mismatch(expected_output, result, help="Make sure your program correctly cubes the input and prints the result.")
 
 @check50.check(compiles)
-def test_1:
+def test_one:
      """Another check for correct cubing."""
      result = check50.run("./cube.c").stdin("42").stdout()
 
@@ -33,14 +33,14 @@ def test_1:
         raise check50.Mismatch(expected_output, result, help="Double-check your cubing logic with a different number.")
 
 @check50.check(compiles)
-def test_error_2:
+def test_error_two:
      """Reject A: Checks for a rejectable non-numeric input..
 Your program should reject non-numeric input. Make sure you're checking for valid numbers."""
      check50.run("./cube.c").stdin("A").reject()
   
 
 @check50.check(compiles)
-def test_error_3:
+def test_error_three:
      """Reject : Checks for a rejectable empty input..
 Your program should reject empty input. Add a check to handle an empty string."""
      check50.run("./cube.c").stdin("").reject()

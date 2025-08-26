@@ -9,7 +9,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """Checks if cube.c compiles successfully"""
-    check50.run("gcc -o cube.c cube.c").exit(0)
+    check50.run("gcc -o cube cube.c").exit(0)
 
 
 @check50.check(compiles)
